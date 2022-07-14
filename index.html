@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrap{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 1200px;
+            height: 700px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px 2px #999;
+        }
+        .left{
+            position: absolute;
+            top: 25px;
+        
+            height: 698px;
+
+            width: 50%;
+            background-color: white;
+        }
+        .right{
+            position: relative;
+            top: -10px;
+            left: 600px;
+            height: 698px;
+            width: 50%;
+            background-color: ghostwhite;
+            border-radius: 20px;
+        }
+  
+
+       
+        .main__text{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 30px;
+            margin: 10px;
+        }
+        .block{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+           
+        }
+        .row{
+            width: 500px;
+            height: 70px;
+            position: relative;
+            background-color: white;
+            border: 1px solid lightgrey;
+            margin: 10px;
+            left: 30px;
+            border-radius: 10px;
+
+        }
+        .first__text{
+            z-index: 2;
+            color: grey;
+            position: relative;
+            top: 10px;
+            left: 9px;
+            font-size: 15px;
+        }
+        .second__text{
+            font-size: 20px;
+            color: black;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 900;
+            position: relative;
+            left: 9px;
+            top: 10px;
+        }
+         input[type = "range"]{
+    -webkit-appearance: none;
+    position: relative;
+ 
+    height: 2px;
+    width: 96%;
+    left: 5px;
+    top: 9px;
+    background:  red;
+    cursor: pointer;
+    outline: none;
+}
+input[type = "range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: red;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+} 
+.suma{
+    margin: 10px;
+    font-size: 60px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+.row1{
+            width: 500px;
+            height: 70px;
+            position: relative;
+       
+            border: none;
+            margin: 10px;
+            left: -10px;
+            border-radius: 10px;
+
+        }
+        select{
+            position: relative;
+            top: -18px;
+            width: 500px;
+            height: 70px;
+            font-size: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 700;
+            border: 1px solid  lightgrey;
+        }
+        option{
+            position: relative;left: 20px;
+            top: 10px;
+            height: 50px;
+            width: 40px;
+        }
+
+
+    
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    <div class="container">
+        <div class="left">
+        
+        <div class="main__text">
+        <h1>Розрахувати</h1>
+        
+        <h1>щомісячний платіж?</h1>
+    </div>
+    <div class="block">
+        <div class="row">
+            <div class="first__text">Вік дитини</div>
+            <div class="second__text">0</div>
+            <input type="range" min="0" max="6" id="year" class="year">
+           
+        </div>
+        <div class="row">
+            <div class="first__text">Формат</div>
+            <select name="select" id="">
+                <option value="" class="second__text">Повний день</option>
+                <option value="">Не повний день</option>
+                
+            </select>
+         
+        </div>
+        <div class="row">
+            <div class="first__text">Харчування</div>
+       
+            <select name="select" id="">
+                <option value="" class="second__text">2-х разове харчування (сніданок + обід)</option>
+                <option value="">4-х разове харчування (сніданок + обід + перекус  + вечеря)</option>
+            </select>
+         
+           
+        </div>
+        <div class="row">
+            <div class="first__text">Вид оплати</div>
+            <select name="select" id="">
+                <option value="" class="second__text">Оплата за реквізитом щомісяця</option>
+                <option value="">Автоматичне списування з карти  щомісяця</option>
+                
+            </select>
+            
+        </div>
+    </div>
+    
+</div>
+<div class="right">
+     
+    <div class="main__text">
+        <h1>Загальні витрати</h1>
+        <div class="suma">7500грн</div>
+        <div class="block">
+            
+            <div class="row1">
+                <div class="first__text">Вартість абонемента </div>
+                <div class="second__text">24323</div>
+             
+            </div>
+            <div class="row1">
+                <div class="first__text">Записуєш у садок більше б ніж 1 дитина</div>
+                <div class="second__text">10% знижки  всі</div>
+               
+            </div>
+            <div class="row1">
+                <div class="first__text">Приведеш друга/подругу?</div>
+                <div class="second__text">10% знижки на місяць</div>
+                
+            </div>
+        </div>
+        
+    </div>
+
+
+</div>
+
+    </div>
+</div>
+<!-- <script>
+    let yearview = document.getElementById('yearview');
+    yearview.innerText = yearReading;
+    year.onclick  =  () =>  {
+    formTrigger(1)
+
+ let n = 0
+ let x = setInterval(function(){
+     place.innerHTML = arr[n]
+     if (n<=arr.length-1){
+         n++;
+     } else{
+         clearInterval(x)
+         place.innerHTML = '';
+         formTrigger(0);
+
+     }
+ },speedReading)}
+</script> -->
+    
+</body>
+</html>
